@@ -3,6 +3,7 @@ require "basic_test/version"
 module BasicTest
   extend self
   require 'stringio'
+  require 'colorize'
 
   def test(string, expected, actual)
     puts string
@@ -14,9 +15,9 @@ module BasicTest
     if result
       puts "PASS"
     else
-      puts "Expected: #{expected}"
-      puts "Actual:   #{actual}"
-      puts "FAIL"
+      puts "Expected: #{expected}".red
+      puts "Actual:   #{actual}".red
+      puts "FAIL".red
     end
     puts "----------------------------------"
   end
