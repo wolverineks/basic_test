@@ -10,9 +10,14 @@ module BasicTest
   end
 
   def display_results(expected, actual)
-    puts "Expected: #{expected}"
-    puts "Actual:   #{actual}"
-    puts expected == actual ? "PASS" : "FAIL"
+    result = (expected == actual)
+    if result
+      puts "PASS"
+    else
+      puts "Expected: #{expected}"
+      puts "Actual:   #{actual}"
+      puts "FAIL"
+    end
     puts "----------------------------------"
   end
 
